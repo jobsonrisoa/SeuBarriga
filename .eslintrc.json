@@ -1,7 +1,7 @@
 {
     "rules": {
         "no-console": "off",
-        "arrow-body-style": "off"
+        "arrow-body-style": "off",
     },
     "env": {
         "jest": true
