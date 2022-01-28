@@ -4,8 +4,10 @@ module.exports = (app) => {
       .then((result) => res.status(200).json(result));
   };
 
+  // eslint-disable-next-line consistent-return
   const create = async (req, res) => {
     const result = await app.services.user.save(req.body);
+    if (result.error) return res.status(400).json(result);
     res.status(201).json(result[0]);
   };
 
